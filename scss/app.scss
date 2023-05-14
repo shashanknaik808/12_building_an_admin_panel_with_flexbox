@@ -27,6 +27,11 @@ img {
     min-height: 100%;
 }
 
+i {
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
 .header {
     display: flex;
 
@@ -55,6 +60,52 @@ img {
         .mobile {
             @include desktop {
                 display: none;
+            }
+        }
+    }
+}
+
+.bar {
+    flex: 1;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+
+    .left-content {
+        padding-left: 1rem;
+        display: flex;
+        align-items: center;
+        color: $white;
+
+        .fa-arrow-right {
+            display: none;
+        }
+    }
+
+    .right-content {
+        display: flex;
+
+        .box {
+            padding: 0 1rem;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                background-color: $secondary;
+            }
+
+            a {
+                color: $white;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                span {
+                    background-color: $tertiary;
+                    padding: .5rem;
+                    margin-left: .5rem;
+                    border-radius: 50%;
+                }
             }
         }
     }
